@@ -14,7 +14,6 @@
 <body>
     <header class="header">
         <a href="#home" class="logo">Ely's Portfolio</a>
-
         <nav class="navbar">
             <a href="#home" style="--i:1" class="active"> Home</a>
             <a href="#about" style="--i:2"> About</a>
@@ -50,7 +49,6 @@
         <div class="about-text">
             <div class="container2">
                 <h2>About <span>Myself</span></h2>
-                <h4>College Student</h4>
                 <p>Let me introduce you myself. I'm a Bachelor's Degree Holder in Computer
                     Engineering Graduated
                     at Bestlink College of the Philippines. I love sweets that's why I have diabetes. Kidding aside,
@@ -113,7 +111,7 @@
         </div>
     </section>
 
-    <section>    
+    <section>
         <div class="container1" id="skills">
             <div class="Technical-bars">
                 <h1 class="heading1">TECHNICAL SKILLS</h1>
@@ -286,13 +284,13 @@
         </div>
 
         <div class="contact-form">
-           <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Full Name" required>
-                    <input type="email" name="Email" placeholder="Email Address" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email Address" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
         </div>
     </section>
 
@@ -301,30 +299,28 @@
     </div>
     <a href="#" class="top"><i class='bx bx-chevrons-up'></i></a>
 
-
     <script src="main.js"></script>
     <form name="submit-to-google-sheet">
-</form>
+    </form>
 
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxn7CVZ1q3N8GkGerKA1CahB5zXpQLsMlRscaQ4MryeRT9_NyFjbMV2hneBjEPBPqAGSQ/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxn7CVZ1q3N8GkGerKA1CahB5zXpQLsMlRscaQ4MryeRT9_NyFjbMV2hneBjEPBPqAGSQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message Sent Succesfully"
-        setTimeout(function(){
-            msg.innerHTML = ""
-        }, 1000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
-
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message Sent Succesfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 1000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
