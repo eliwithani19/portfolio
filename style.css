@@ -381,7 +381,7 @@ section {
 }
 
 .container1 h1 {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-variant: small-caps;
     font-size: 30px;
 }
@@ -410,6 +410,7 @@ section {
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
 }
+
 .heading1 {
     text-align: center;
     text-decoration: underline;
@@ -1019,7 +1020,7 @@ form textarea {
     }
 }
 
-.btn .btn2{
+.btn .btn2 {
     margin-top: 10px;
     display: inline-block;
     position: relative;
@@ -1034,7 +1035,7 @@ form textarea {
         1px 1px 30px #0053b8f7
 }
 
-form .btn2{
+form .btn2 {
     padding: 14px 150px;
     font-size: 18px;
     margin-top: 20px;
@@ -1045,8 +1046,8 @@ form .btn2{
     color: #0ef;
     margin-top: 15px;
     display: block;
-
 }
+
 
 /* ===========================
    TABLET FIX (1024px ↓)
@@ -1160,8 +1161,10 @@ form .btn2{
     }
 
     .container1{
-        width: 100%;
+        width: auto;
+        height: auto;
         padding: 20px;
+        flex-direction: column;
     }
 
     .radial-bars{
@@ -1243,3 +1246,5 @@ form .btn2{
         right: 1rem;
     }
 }
+
+
