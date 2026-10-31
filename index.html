@@ -112,8 +112,8 @@
         </div>
     </section>
 
-    <section>
-        <div class="container1" id="skills">
+    <section class="skills-section" id="skills" aria-label="Skills">
+        <div class="container1">
             <div class="Technical-bars">
                 <h1 class="heading1">TECHNICAL SKILLS</h1>
                 <div class="bar"><i style="color:#c95d2e;" class='bx bxl-html5'></i>
@@ -155,35 +155,43 @@
             <h1 class="heading1">PROFESSIONAL SKILLS</h1>
             <div class="radial-bars">
                 <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
+                    <div class="skill-ring">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
                     <div class="text">Creativity</div>
                 </div>
                 <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">85%</div>
+                    <div class="skill-ring">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">85%</div>
+                    </div>
                     <div class="text">Communication</div>
                 </div>
                 <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
+                    <div class="skill-ring">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
                     <div class="text">Problem Solving</div>
                 </div>
                 <div class="radial-bar">
-                    <svg x="0px" y="0px" viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
+                    <div class="skill-ring">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                    </div>
                     <div class="text">Team Work</div>
                 </div>
             </div>
@@ -228,50 +236,50 @@
             <div class="main-text">
                 <h2>My <span>Experiences</span></h2>
 
-                <div class="work-experience" aria-labelledby="work-experience-heading">
-                    <h3 id="work-experience-heading">Work Experience</h3>
-                    <div class="experience-timeline">
-                        <article class="experience-card">
-                            <span class="experience-status">Current role</span>
-                            <h4>Purchasing Assistant</h4>
+                <div class="expcontainer">
+                    <div class="exp-list">
+                        <article class="exp experience-card">
+                            <div class="experience-visual" aria-hidden="true">
+                                <i class="bx bx-cart-alt"></i>
+                                <span>Work Experience</span>
+                            </div>
+                            <h3>Purchasing Assistant</h3>
                             <p class="experience-company">Techbrokers Wastewater Solutions Inc.</p>
                             <p class="experience-period"><time datetime="2025-09">September 2025</time> &ndash; Present</p>
+                            <span class="experience-status">Current role</span>
                         </article>
-                        <article class="experience-card">
-                            <h4>Engineering Coordinator</h4>
+                        <article class="exp experience-card">
+                            <div class="experience-visual" aria-hidden="true">
+                                <i class="bx bx-cog"></i>
+                                <span>Work Experience</span>
+                            </div>
+                            <h3>Engineering Coordinator</h3>
                             <p class="experience-period">Duration: 2 months</p>
                         </article>
-                    </div>
-                </div>
-
-                <div class="academic-experiences">
-                    <div class="expcontainer">
-                        <div class="exp-list">
-                            <div class="exp">
-                                <img src="disecting.png">
-                                <div class="layer"></div>
-                                <h3>Frog Disecting</h3>
-                            </div>
-                            <div class="exp">
-                                <img src="robortics.png">
-                                <div class="layer"></div>
-                                <h3>Divisional Robotics Contest</h3>
-                            </div>
-                            <div class="exp">
-                                <img src="robotics0.png">
-                                <div class="layer"></div>
-                                <h3>Divisional Robotics Awarding</h3>
-                            </div>
-                            <div class="exp">
-                                <img src="robotics2.png">
-                                <div class="layer"></div>
-                                <h3>3rd Place Divisional Robotics</h3>
-                            </div>
-                            <div class="exp">
-                                <img src="robotics1.png">
-                                <div class="layer"></div>
-                                <h3>EV3 ROBOT</h3>
-                            </div>
+                        <div class="exp">
+                            <img src="disecting.png">
+                            <div class="layer"></div>
+                            <h3>Frog Disecting</h3>
+                        </div>
+                        <div class="exp">
+                            <img src="robortics.png">
+                            <div class="layer"></div>
+                            <h3>Divisional Robotics Contest</h3>
+                        </div>
+                        <div class="exp">
+                            <img src="robotics0.png">
+                            <div class="layer"></div>
+                            <h3>Divisional Robotics Awarding</h3>
+                        </div>
+                        <div class="exp">
+                            <img src="robotics2.png">
+                            <div class="layer"></div>
+                            <h3>3rd Place Divisional Robotics</h3>
+                        </div>
+                        <div class="exp">
+                            <img src="robotics1.png">
+                            <div class="layer"></div>
+                            <h3>EV3 ROBOT</h3>
                         </div>
                     </div>
                 </div>
