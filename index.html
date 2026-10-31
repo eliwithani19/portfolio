@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-motion="full">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <header class="header">
         <a href="#home" class="logo">Ely's Portfolio</a>
-        <nav class="navbar" aria-label="Main navigation">
+        <nav class="navbar">
             <a href="#home" style="--i:1" class="active"> Home</a>
             <a href="#about" style="--i:2"> About</a>
             <a href="#services" style="--i:3"> Services</a>
             <a href="#skills" style="--i:4"> Skills</a>
             <a href="#portfolio" style="--i:5"> Portfolio</a>
-            <a href="#work-experience" style="--i:6"> Work Experience</a>
-            <a href="#exp" style="--i:7"> My Experiences</a>
-            <a href="#Contact" style="--i:8"> Contact</a>
+            <a href="#exp" style="--i:6"> Experience</a>
+            <a href="#Contact" style="--i:7"> Contact</a>
         </nav>
-        <button class="motion-toggle" id="motion-toggle" type="button" aria-label="Animations" aria-pressed="true" title="Pause animations">
-            <i class="bx bx-pause" aria-hidden="true"></i>
-            <span>Motion on</span>
-        </button>
     </header>
-    <main>
-    <section class="home" id="home" aria-labelledby="home-heading">
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
-            <h1 id="home-heading">Eleazar Flores</h1>
-            <h3>And I'm a <span class="text" aria-live="off">Degree Holder</span></h3>
+            <h1>Eleazar Flores</h1>
+            <h3>And I'm a <span class="text"></span></h3>
             <p>You can call me Ely or Zar. </p>
             <div class="home-sci">
                 <a href="https://www.facebook.com/abcdelyzzz" style="--i:7"><i class='bx bxl-facebook'></i></a>
@@ -42,18 +37,18 @@
                 <a href="https://www.instagram.com/abcdelyzzz/" style="--i:8"><i class='bx bxl-instagram'></i></a>
                 <a href="https://www.tiktok.com/@abcdelyzzzz" style="--i:10"><i class='bx bxl-tiktok'></i></a>
             </div>
-            <a href="#about" class="btn-box">More About Me</a>
+            <a href="#" class="btn-box">More About Me</a>
         </div>
         <span class="home-imgHover"></span>
     </section>
 
-    <section class="about" id="about" aria-labelledby="about-heading">
+    <section class="about" id="about">
         <div class="about-img">
             <img src="about-img.png">
         </div>
         <div class="about-text">
             <div class="container2">
-                <h2 id="about-heading">About <span>Myself</span></h2>
+                <h2>About <span>Myself</span></h2>
                 <p>Let me introduce you myself. I'm a Bachelor's Degree Holder in Computer
                     Engineering Graduated
                     at Bestlink College of the Philippines. I love sweets that's why I have diabetes. Kidding aside,
@@ -73,15 +68,15 @@
                     to make a positive impact through cutting-edge solutions and sustainable practices.
                     I'm currently work in Techbrokers Wastewater Solutions Inc. as a Purchasing Assistant just exploring tho.
                 </p>
-                <a href="#work-experience" class="btn-box">View Work Experience</a>
+                <a href="#" class="btn-box">More About Me</a>
             </div>
         </div>
     </section>
 
-    <section id="services" aria-labelledby="services-heading">
-        <div class="services">
+    <section>
+        <div class="services" id="services">
             <div class="container">
-                <h2 class="sub-title" id="services-heading">My <span>Services</span></h2>
+                <h1 class="sub-title">My <span>Services</span></h1>
                 <div class="services-list">
                     <div>
                         <i class='bx bx-code' style='color:#00efff'></i>
@@ -117,12 +112,10 @@
         </div>
     </section>
 
-    <section class="skills-section" id="skills" aria-labelledby="skills-heading">
-        <h2 class="sub-title" id="skills-heading">My <span>Skills</span></h2>
-        <div class="skills-grid">
+    <section class="skills-section" id="skills" aria-label="Skills">
         <div class="container1">
             <div class="Technical-bars">
-                <h3 class="heading1">TECHNICAL SKILLS</h3>
+                <h1 class="heading1">TECHNICAL SKILLS</h1>
                 <div class="bar"><i style="color:#c95d2e;" class='bx bxl-html5'></i>
                     <div class="info">
                         <span>HTML</span>
@@ -159,7 +152,7 @@
         </div>
 
         <div class="container1">
-            <h3 class="heading1">PROFESSIONAL SKILLS</h3>
+            <h1 class="heading1">PROFESSIONAL SKILLS</h1>
             <div class="radial-bars">
                 <div class="radial-bar">
                     <div class="skill-ring">
@@ -203,13 +196,15 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
-    <section id="portfolio" aria-labelledby="portfolio-heading">
-        <div class="main-text">
-            <h2 id="portfolio-heading">Digital <span>Artworks</span></h2>
-            <div class="pfcontainer">
+    <section>
+        <div id="portfolio" id="project">
+            <div class="main-text" id="project">
+                <h2>Digital <span>Artworks</span></h2>
+
+                <div id="portfolio">
+                    <div class="pfcontainer">
                         <div class="work-list">
                             <div class="work">
                                 <img src="work-1.png">
@@ -227,15 +222,22 @@
                                 <h3>Digital Portrait of our Dog Haru</h3>
                             </div>
                         </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        </div>
+        </div>
         </div>
     </section>
 
-    <section id="work-experience" aria-labelledby="work-heading">
-        <div class="main-text">
-            <h2 id="work-heading">Work <span>Experience</span></h2>
-            <div class="expcontainer">
-                <div class="exp-list work-experience-list">
+    <section>
+        <div id="exp">
+            <div class="main-text">
+                <h2>My <span>Experiences</span></h2>
+
+                <div class="expcontainer">
+                    <div class="exp-list">
                         <article class="exp experience-card">
                             <div class="experience-visual" aria-hidden="true">
                                 <i class="bx bx-cart-alt"></i>
@@ -254,16 +256,6 @@
                             <h3>Engineering Coordinator</h3>
                             <p class="experience-period">Duration: 2 months</p>
                         </article>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="exp" aria-labelledby="experience-heading">
-        <div class="main-text">
-            <h2 id="experience-heading">My <span>Experiences</span></h2>
-            <div class="expcontainer">
-                <div class="exp-list">
                         <div class="exp">
                             <img src="disecting.png">
                             <div class="layer"></div>
@@ -289,17 +281,17 @@
                             <div class="layer"></div>
                             <h3>EV3 ROBOT</h3>
                         </div>
-
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact" id="Contact" aria-labelledby="contact-heading">
+    <section class="contact" id="Contact">
         <div class="contact-text">
-            <h2 id="contact-heading">Contact <span>Me</span></h2>
+            <h2>Contact <span>Me</span></h2>
             <h4>Let's Work Together!</h4>
-            <p class="contact-intro"><span class="text1" aria-live="off">You can visit my social media, contact me on email and contact number provided below. Rooting and Attracting Project together! Have a Great Day!</span></p>
+            <p><span class="text1"></span></p>
             <div class="contact-list">
                 <li><i class='bx bxs-send bx-flip-vertical'></i> elimetangere09@gmail.com</li>
                 <li><i class='bx bxs-phone'></i> 09945944245</li>
@@ -324,14 +316,14 @@
         </div>
     </section>
 
-    </main>
-
     <div class="last-text">
         <p>Developed with Love by Eleazar Flores © 2026</p>
     </div>
-    <a href="#home" class="top" aria-label="Back to Home"><i class='bx bx-chevrons-up'></i></a>
+    <a href="#" class="top"><i class='bx bx-chevrons-up'></i></a>
 
     <script src="main.js"></script>
+    <form name="submit-to-google-sheet">
+    </form>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxn7CVZ1q3N8GkGerKA1CahB5zXpQLsMlRscaQ4MryeRT9_NyFjbMV2hneBjEPBPqAGSQ/exec'
