@@ -55,7 +55,7 @@
                 "--card-y": y + "px",
                 "--card-angle": angle + "deg",
                 "--card-z": String(expanded ? index + 1 : cards.length - index),
-                "--deal-delay": (expanded ? index * 85 : (cards.length - index - 1) * 35) + "ms"
+                "--deal-delay": (expanded ? index * 700 : (cards.length - index - 1) * 35) + "ms"
             }).forEach(([property, value]) => card.style.setProperty(property, value));
         });
 
