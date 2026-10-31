@@ -2,8 +2,6 @@
     const gallery = document.querySelector("#exp .experience-gallery");
     if (!gallery) return;
     const deck = gallery.querySelector(".experience-deck");
-    const toggle = gallery.querySelector(".experience-deck-toggle");
-    const controls = gallery.querySelector(".experience-gallery-controls");
     const cards = [...deck.querySelectorAll(":scope > .exp")];
     if (!cards.length) return;
 
@@ -20,18 +18,18 @@
         lastWidth = width;
         const expanded = isExpanded();
         const gap = 24;
-        const columns = Math.min(cards.length, Math.max(1,
-            Math.floor((width + gap) / (200 + gap))));
-        const closedWidth = Math.min(290, Math.max(1, width - 48));
+        const columns = Math.min(Math.ceil(cards.length / 2), Math.max(1,
+            Math.floor((width + gap) / (260 + gap))));
+        const closedWidth = Math.min(360, Math.max(1, width - 48));
         const closedHeight = Math.round((closedWidth - 24) * 0.75) + 110;
         const cardWidth = expanded
-            ? Math.min(290, (width - gap * (columns - 1)) / columns)
+            ? Math.min(400, (width - gap * (columns - 1)) / columns)
             : closedWidth;
         const photoHeight = Math.max(1, Math.round((cardWidth - 24) * 0.75));
         const cardHeight = photoHeight + 110;
         const rows = Math.ceil(cards.length / columns);
         const openHeight = 56 + rows * cardHeight + (rows - 1) * 28;
-        // Keep the hover area stable as the stack spreads into one row.
+        // Keep the hover area stable as the stack spreads into larger rows.
         deck.style.setProperty("--deck-height",
             Math.max(closedHeight + 80, expanded ? openHeight : 0) + "px");
 
@@ -63,9 +61,8 @@
 
         deck.classList.add("is-ready");
         deck.classList.toggle("is-open", expanded);
-        toggle.setAttribute("aria-expanded", String(expanded));
-        toggle.textContent = expanded ? "Stack photos" : "Spread photos";
-        controls.hidden = false;
+        deck.setAttribute("aria-expanded", String(expanded));
+        deck.setAttribute("aria-label", expanded ? "Stack experience photos" : "Spread experience photos");
     }
 
     function togglePinned() {
@@ -86,21 +83,17 @@
         layout();
     });
     deck.addEventListener("click", togglePinned);
-    toggle.addEventListener("click", () => {
-        if (isExpanded()) {
-            pinned = false;
-            hoverSuppressed = true;
-        } else {
-            pinned = true;
-        }
-        layout();
-    });
     gallery.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            togglePinned();
+            return;
+        }
         if (event.key !== "Escape") return;
         pinned = false;
         hoverSuppressed = true;
         layout();
-        toggle.focus({ preventScroll: true });
+        deck.focus({ preventScroll: true });
     });
 
     if ("ResizeObserver" in window) {
