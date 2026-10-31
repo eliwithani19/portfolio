@@ -236,8 +236,12 @@
             <div class="main-text">
                 <h2>My <span>Experiences</span></h2>
 
-                <div class="expcontainer">
-                    <div class="exp-list">
+                <div class="expcontainer experience-gallery">
+                    <div class="experience-gallery-controls" hidden>
+                        <button type="button" class="experience-deck-toggle" aria-expanded="false" aria-controls="experience-photo-deck">Spread photos</button>
+                        <p>Hover to spread. Click a photo to keep open.</p>
+                    </div>
+                    <div class="exp-list experience-deck" id="experience-photo-deck" role="group" aria-label="My experience photos">
                         <div class="exp">
                             <img src="disecting.png">
                             <div class="layer"></div>
@@ -331,6 +335,7 @@
     </div>
     <a href="#" class="top"><i class='bx bx-chevrons-up'></i></a>
 
+    <script src="experience-gallery.js"></script>
     <script src="main.js"></script>
     <form name="submit-to-google-sheet">
     </form>

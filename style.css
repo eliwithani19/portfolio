@@ -1349,3 +1349,98 @@ form .btn2 {
         right: 1rem;
     }
 }
+
+/* The stacked/dealt photo animation applies only to My Experiences. */
+#exp .experience-gallery-controls:not([hidden]) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin-bottom: 12px;
+}
+
+#exp .experience-gallery-controls p {
+    color: #a9dce7;
+    font-size: 14px;
+    text-align: center;
+}
+
+#exp .experience-deck-toggle {
+    padding: 10px 18px;
+    border: 1px solid #00eeff66;
+    border-radius: 24px;
+    background: #0b365d;
+    color: #d8f7ff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#exp .experience-deck-toggle:hover {
+    background: #075e7a;
+}
+
+#exp .experience-deck-toggle:focus-visible {
+    outline: 2px solid #0ef;
+    outline-offset: 4px;
+}
+
+#exp .experience-deck.is-ready {
+    position: relative;
+    display: block;
+    isolation: isolate;
+    width: 100%;
+    height: var(--deck-height);
+    transition: height 1100ms cubic-bezier(.22, .7, .2, 1);
+}
+
+#exp .experience-deck.is-ready > .exp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 12px;
+    border: 1px solid #8fedff55;
+    border-radius: 12px;
+    background: #0b2436;
+    box-shadow: 0 10px 26px #0007, 0 0 14px #0053b855;
+    cursor: pointer;
+    z-index: var(--card-z);
+    transform: translate(var(--card-x), calc(var(--card-y) + var(--card-lift, 0px))) rotate(var(--card-angle));
+    transition: transform 800ms cubic-bezier(.22, .7, .2, 1),
+        width 650ms ease, height 650ms ease, box-shadow 250ms ease;
+    transition-delay: var(--deal-delay, 0ms);
+    will-change: transform;
+}
+
+#exp .experience-deck.is-ready > .exp > img {
+    width: 100%;
+    height: var(--photo-height);
+    object-fit: contain;
+    border-radius: 6px;
+    background: #071727;
+    transform: none;
+    transition: height 650ms ease;
+}
+
+#exp .experience-deck.is-ready > .exp > h3 {
+    margin: 14px 0 0;
+    font-size: clamp(15px, 1.6vw, 20px);
+    line-height: 1.25;
+}
+
+#exp .experience-deck.is-ready.is-open > .exp:hover {
+    --card-lift: -7px;
+    z-index: 20;
+    box-shadow: 0 16px 30px #0008, 0 0 18px #00eeff55;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #exp .experience-deck.is-ready,
+    #exp .experience-deck.is-ready > .exp,
+    #exp .experience-deck.is-ready > .exp > img {
+        transition-duration: 0.01ms;
+        transition-delay: 0ms;
+    }
+}
