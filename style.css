@@ -1426,11 +1426,12 @@ form .btn2 {
 #exp .experience-deck.is-ready > .exp > img {
     width: 100%;
     height: var(--photo-height);
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 6px;
     background: #071727;
     transform: none;
     transition: height 650ms ease;
+    transition-delay: var(--deal-delay, 0ms);
 }
 
 #exp .experience-deck.is-ready > .exp > h3 {
