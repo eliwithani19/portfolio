@@ -17,9 +17,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: linear-gradient(115deg, #051125 0%, #30205f 52%, #07545d 100%);
-    border-bottom: 1px solid rgb(0 238 255 / 20%);
-    box-shadow: 0 6px 24px rgb(0 0 0 / 20%);
+    background: #051125;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,6 +171,8 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    animation: slideTop .5s ease forwards;
+    animation-delay: 2s;
 }
 
 .about-img img {
@@ -1167,50 +1167,6 @@ form .btn2 {
 .experience-period {
     margin-top: 8px;
     color: #9fe8f1;
-}
-
-/* Enabled by JavaScript only; translate leaves card hover transforms intact. */
-.scroll-reveal.scroll-reveal {
-    opacity: 0;
-    translate: 0 var(--reveal-offset, 24px);
-    transition: opacity 650ms ease, translate 650ms ease,
-        background 500ms ease, transform 700ms ease;
-}
-
-.scroll-reveal.is-visible {
-    opacity: 1;
-    translate: 0 0;
-}
-
-/* Keep keyboard-focused content visible even during a reveal. */
-.scroll-reveal:focus-within {
-    opacity: 1;
-    translate: 0 0;
-}
-
-:root {
-    scroll-padding-top: 110px;
-}
-
-@media (max-width: 768px) {
-    :root {
-        scroll-padding-top: 160px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-delay: 0ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
-    .scroll-reveal.scroll-reveal {
-        opacity: 1;
-        translate: none;
-    }
 }
 
 /* ===========================
