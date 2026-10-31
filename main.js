@@ -8,8 +8,6 @@ const revealElements = document.querySelectorAll([
     ".container1",
     ".main-text > h2",
     ".work-list > .work",
-    ".work-experience > h3",
-    ".experience-card",
     ".exp-list > .exp",
     ".contact-text",
     ".contact-form",
